@@ -1,6 +1,6 @@
 {
-    "issuer": "https://raw.githubusercontent.com/delta003/oidc-issuer/main",
-    "jwks_uri": "https://raw.githubusercontent.com/delta003/oidc-issuer/main/.well-known/jwks",
+    "issuer": "https://raw.githubusercontent.com/delta003/oidc-issuer/develop",
+    "jwks_uri": "https://raw.githubusercontent.com/delta003/oidc-issuer/develop/.well-known/jwks",
     "subject_types_supported": [
         "public",
         "pairwise"
