@@ -31,7 +31,8 @@ jwks = {
     "keys": [
         {
             "kty": "RSA",
-            "kid": "your-key-id",
+            # Replace me.
+            "kid": "letmein",
             "use": "sig",
             "alg": "RS256",
             "n": base64.urlsafe_b64encode(public_key.public_numbers().n.to_bytes(256, 'big')).rstrip(b'=').decode('utf-8'),
@@ -41,6 +42,9 @@ jwks = {
 }
 
 # Print or save the JWKS JSON and keys
-print(json.dumps(jwks, indent=4))
-print(private_pem)
-print(public_pem)
+with open('.well-known/jwks', 'w') as f:
+    f.write(json.dumps(jwks, indent=4))
+with open('.private', 'w') as f:
+    f.write(private_pem)
+with open('.public', 'w') as f:
+    f.write(public_pem)
